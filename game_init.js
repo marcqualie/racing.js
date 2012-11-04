@@ -48,26 +48,20 @@ var config = {
 		})
 	]
 }
+
 RacingJS.load(config);
+
 var w = 16, h = 32;
 RacingJS.addPlayer({
-	source: new Resource({ /*url: 'images/car1.jpg',*/ width: w, height: h }),
+	source: new Resource({ url: 'images/car1.jpg', width: w, height: h }),
 	x: 32,
 	y: 50,
 	rotation: 90
 });
-//			for (var i = 0; i < 10; i++) {
-//				spawnCar.delay(i * 2000);
-//			}
+
 (function () {
 	var h = '';
-	var human = RacingJS.players[0];
-	var point = human.checkpoint;
-	if (!point) return;
-	var dis = human.distanceTo(point.x, point.y);
-//	h += '<div>' + dis.format({decimals: 2}) + '</div><br/>';
 	RacingJS.players.each(function (player, i) {
-		if (i > 0 ) return;
 		h += '<div>Player ' + i + ': '
 		+ '<b>' + player.lap + '/5</b> '
 		+ 'x:' + (player.x + player.canvas.width / 2).format({decimals: 4})
@@ -77,14 +71,14 @@ RacingJS.addPlayer({
 	});
 	$('trace').set('html', h);
 }).periodical(100);
+
 function spawnCar () {
 	RacingJS.addPlayer({
 		npc: 1,
-		source: new Resource({ /*url: 'images/car1.jpg',*/ width: 16, height: 32 }),
+		source: new Resource({ width: 16, height: 32 }),
 		x: -32,
 		y: 50,
 		speedMax: (Math.random() * 50 / 10).round(2) + 3,
-		rotation: 90
-		//target: RacingJS.players[0]
+		rotation: 90,
 	});
 }
