@@ -8,7 +8,7 @@ $files = array(
 );
 
 // Which game to compiled?
-$files[] = 'prototype1.js';
+$files[] = 'game_init.js';
 
 // Compile Code
 $cmd = "java -jar compiler.jar";
