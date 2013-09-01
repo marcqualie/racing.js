@@ -9,3 +9,6 @@ Right now this is very buggy, and I'm almost certain some of the files are missi
 ## Contributing
 
 Anyone is welcome to contribute, or request improvements to this project
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/marcqualie/racing.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
