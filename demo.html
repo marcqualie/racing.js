@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #e5e5e5;
+    }
+    canvas {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 1200px;
+        height: 640px;
+        margin-left: -600px;
+        margin-top: -320px;
+        background: #fff;
+        box-shadow: 2px 2px 5px #ccc;
+    }
+    </style>
+    <script src="lib/Core.js"></script>
+    <script src="lib/classes/DisplayObject.js"></script>
+    <script src="lib/classes/Stage.js"></script>
+    <script src="lib/classes/Car.js"></script>
+    <script>
+    var Game = RacingJS.setup({
+        'canvas': 'demo1'
+    });
+    Game.load(function (game) {
+
+        var Player = game.newClass('Car', {
+            x: 1
+        });
+        game.stage.addChild(Player);
+
+    });
+    Game.loop(function () {
+
+        console.log('game.loop');
+
+    });
+    </script>
+</head>
+<body>
+
+<canvas id="demo1"></canvas>
+
+</body>
+</html>
